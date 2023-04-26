@@ -1,0 +1,19 @@
+---
+manifest_version: "1"
+name: foo
+integrity:
+  network_seed: ~
+  properties: ~
+  origin_time: 1682516941516456
+  zomes:
+    - name: bar_integrity
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/bar_integrity.wasm"
+      dependencies: ~
+coordinator:
+  zomes:
+    - name: bar
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/bar.wasm"
+      dependencies:
+        - name: bar_integrity
